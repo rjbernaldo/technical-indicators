@@ -1,0 +1,37 @@
+{
+  "name": "technical-indicators",
+  "version": "1.0.0",
+  "description": "Technical indicators used by coinfu.io",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjbernaldo/technical-indicators.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjbernaldo/technical-indicators/issues"
+  },
+  "homepage": "https://github.com/rjbernaldo/technical-indicators#readme",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "@types/jest": "^24.0.18"
+  },
+  "files": ["lib/**/*"]
+}
