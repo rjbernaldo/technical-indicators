@@ -1,8 +1,9 @@
 {
-  "name": "technical-indicators",
+  "name": "@rjbernaldo/technical-indicators",
   "version": "1.0.0",
   "description": "Technical indicators used by coinfu.io",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/types.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
