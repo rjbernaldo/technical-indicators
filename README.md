@@ -1,1 +1,1 @@
-# coinfu.io Technical Indicators
+# `Technical indicators for coinfu.io`
