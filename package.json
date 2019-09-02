@@ -3,7 +3,7 @@
   "version": "1.0.5",
   "description": "Technical indicators used by coinfu.io",
   "main": "dist/index.js",
-  "types": "dist/types.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
