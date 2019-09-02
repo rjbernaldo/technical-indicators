@@ -1,7 +1,7 @@
 import sma from './sma';
 
 // https://www.investopedia.com/terms/e/ema.asp
-export default function(dataSet: Array<number>, period: number): number {
+export default function(dataSet: number[], period: number): number {
   const emaSet = [];
   const firstIndex = period - 1;
   for (let i = firstIndex; i < dataSet.length; i++) {
