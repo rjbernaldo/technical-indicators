@@ -15,7 +15,8 @@ test('period greater than dataSet length', () => {
 });
 
 test('overflowing data set', () => {
-  const dataSet = [ 10410,
+  const dataSet = [
+    10410,
     10398,
     10399,
     10384.4799991,
@@ -34,9 +35,10 @@ test('overflowing data set', () => {
     10532.65998619,
     10584,
     10622.86524859,
-    10439 ]
+    10439,
+  ];
 
   const result = sma(dataSet, 10);
 
   expect(result).toBe(10525.257587279);
-})
+});
