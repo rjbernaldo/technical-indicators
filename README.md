@@ -1,6 +1,6 @@
 # `technical-indicators`
 
-This package is a set of technical indicators used on [coinfu.io](https://coinfu.io).
+A set of technical indicators used at [coinfu.io](https://coinfu.io).
 
 ## Installation
 ```
