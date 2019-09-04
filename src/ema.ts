@@ -1,6 +1,6 @@
-import { b } from './utils';
-import sma from './sma';
 import BigNumber from 'bignumber.js';
+import sma from './sma';
+import { toBig } from './utils';
 
 // https://www.investopedia.com/terms/e/ema.asp
 export default function(dataSet: number[], period: number): number {
@@ -11,10 +11,10 @@ export default function(dataSet: number[], period: number): number {
     const result = sma(dataSet.slice(0, i + 1), period);
 
     if (i === firstIndex) {
-      emaSet.push(b(result));
+      emaSet.push(toBig(result));
     } else {
-      const mult = b(2).dividedBy(period + 1);
-      const bClose = b(dataSet[i]);
+      const mult = toBig(2).dividedBy(period + 1);
+      const bClose = toBig(dataSet[i]);
       const bPrev = emaSet[emaSet.length - 1];
       const ema = bClose.minus(bPrev).times(mult).plus(bPrev);
       emaSet.push(ema);

@@ -1,9 +1,9 @@
 import BigNumber from 'bignumber.js';
 
-export function b(n: number): BigNumber {
+export function toBig(n: number): BigNumber {
   return new BigNumber(n);
 }
 
-export function n(b: BigNumber): number {
+export function toNum(b: BigNumber): number {
   return parseFloat(b.toFixed());
 }
