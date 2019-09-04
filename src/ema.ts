@@ -1,23 +1,26 @@
+import { b } from './utils';
 import sma from './sma';
+import BigNumber from 'bignumber.js';
 
 // https://www.investopedia.com/terms/e/ema.asp
 export default function(dataSet: number[], period: number): number {
-  const emaSet = [];
+  const emaSet: BigNumber[] = [];
   const firstIndex = period - 1;
   for (let i = firstIndex; i < dataSet.length; i++) {
-    const close = dataSet[i];
 
     const result = sma(dataSet.slice(0, i + 1), period);
 
     if (i === firstIndex) {
-      emaSet.push(result);
+      emaSet.push(b(result));
     } else {
-      const mult = 2 / (period + 1);
-      const prev: number = emaSet[emaSet.length - 1];
-      const ema: number = (close - prev) * mult + prev;
+      const mult = b(2).dividedBy(period + 1);
+      const bClose = b(dataSet[i]);
+      const bPrev = emaSet[emaSet.length - 1];
+      const ema = bClose.minus(bPrev).times(mult).plus(bPrev);
       emaSet.push(ema);
     }
   }
 
-  return emaSet[emaSet.length - 1];
+  const final = emaSet[emaSet.length - 1].toString();
+  return parseFloat(final);
 }
