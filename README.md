@@ -1,6 +1,6 @@
 # `technical-indicators`
 
-A set of technical indicators used at [coinfu.io](https://coinfu.io) which relies heavily on [bignumber.js](https://github.com/MikeMcl/bignumber.js/).
+A set of technical indicators used at [coinfu.io](https://coinfu.io) which heavily relies on [bignumber.js](https://github.com/MikeMcl/bignumber.js/).
 
 ## Installation
 ```bash
