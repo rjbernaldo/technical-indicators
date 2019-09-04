@@ -7,7 +7,6 @@ export default function(dataSet: number[], period: number): number {
   const emaSet: BigNumber[] = [];
   const firstIndex = period - 1;
   for (let i = firstIndex; i < dataSet.length; i++) {
-
     const result = sma(dataSet.slice(0, i + 1), period);
 
     if (i === firstIndex) {
@@ -16,7 +15,10 @@ export default function(dataSet: number[], period: number): number {
       const mult = toBig(2).dividedBy(period + 1);
       const bClose = toBig(dataSet[i]);
       const bPrev = emaSet[emaSet.length - 1];
-      const ema = bClose.minus(bPrev).times(mult).plus(bPrev);
+      const ema = bClose
+        .minus(bPrev)
+        .times(mult)
+        .plus(bPrev);
       emaSet.push(ema);
     }
   }
