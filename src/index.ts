@@ -1,9 +1,9 @@
 import ema from './ema';
 import sma from './sma';
-import atr from './atr';
+import satr from './satr';
 
 export default {
   ema,
   sma,
-  atr,
+  satr,
 };

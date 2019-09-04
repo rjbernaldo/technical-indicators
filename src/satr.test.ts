@@ -1,4 +1,4 @@
-import atr from './atr';
+import satr from './satr';
 
 test('regular', () => {
   const tickers = [
@@ -34,7 +34,7 @@ test('regular', () => {
     { high: 48.79, low: 47.73, close: 47.85 },
   ];
 
-  const result = atr(tickers, 14);
+  const result = satr(tickers, 14);
 
-  expect(result).toBe(1.32);
+  expect(result).toBe(1.6271428571428572);
 });

@@ -15,6 +15,9 @@ const result = sma([1,2,3], 3);
 ```
 
 ## Indicators
-- [SMA](https://github.com/rjbernaldo/technical-indicators/blob/master/src/sma.ts)
-- [EMA](https://github.com/rjbernaldo/technical-indicators/blob/master/src/ema.ts)
-- [ATR](https://github.com/rjbernaldo/technical-indicators/blob/master/src/atr.ts)
+  - [SMA - Simple Moving Average](https://github.com/rjbernaldo/technical-indicators/blob/master/src/sma.ts)
+  - [EMA - Exponential Moving Average](https://github.com/rjbernaldo/technical-indicators/blob/master/src/ema.ts)
+  - [[WIP] SATR - Simple Average True Range (no weighting)](https://github.com/rjbernaldo/technical-indicators/blob/master/src/satr.ts)
+
+
+_WIP - Work in progress_
